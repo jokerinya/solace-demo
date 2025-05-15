@@ -7,6 +7,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddHostedService<SolaceSubscriberService>();
+        builder.Services.AddHostedService<SolaceQueueSubscriberService>();
 
         var app = builder.Build();
 
