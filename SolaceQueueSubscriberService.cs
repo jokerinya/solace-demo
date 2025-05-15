@@ -37,8 +37,6 @@ public class SolaceQueueSubscriberService : BackgroundService
 
         Console.WriteLine("Bound to queue and waiting for messages.");
         return Task.CompletedTask;
-
-
     }
     
     private void QueueMessageHandler(object? _, MessageEventArgs args)
@@ -47,7 +45,7 @@ public class SolaceQueueSubscriberService : BackgroundService
         var text = Encoding.UTF8.GetString(message.BinaryAttachment);
         Console.WriteLine($"[QUEUE] Received: {text}");
 
-        flow?.Ack(message.ADMessageId);
+        flow?.Ack(message.ADMessageId); // Acknowledge a receiving confirmation to queue
         Console.WriteLine("[QUEUE] Message acknowledged.");
     }
     
