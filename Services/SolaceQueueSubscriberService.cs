@@ -1,7 +1,7 @@
 using System.Text;
 using SolaceSystems.Solclient.Messaging;
 
-namespace SolaceDemo;
+namespace SolaceDemo.Services;
 
 public class SolaceQueueSubscriberService : BackgroundService
 {

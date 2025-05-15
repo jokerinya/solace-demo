@@ -1,4 +1,6 @@
-using SolaceDemo;
+using SolaceDemo.Services;
+
+namespace SolaceDemo;
 
 public class Program
 {
